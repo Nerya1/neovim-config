@@ -22,7 +22,14 @@ require('lazy').setup({
       },
     },
   },
-  'nvim-lualine/lualine.nvim',
+  {
+    'nvim-lualine/lualine.nvim',
+    config = {
+      options = {
+        theme = 'tokyonight',
+      },
+    },
+  },
   'neovim/nvim-lspconfig',
   {
     'mrcjkb/haskell-tools.nvim',
@@ -48,6 +55,22 @@ require('lazy').setup({
   {
     'kepano/flexoki-neovim',
     name = 'flexoki',
+  },
+  {
+    "baliestri/aura-theme",
+    lazy = false,
+    priority = 1000,
+    config = function(plugin)
+      vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+    end
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = {
+      style = "night",
+    },
   },
 })
 
