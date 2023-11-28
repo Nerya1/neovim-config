@@ -24,11 +24,11 @@ require('lazy').setup({
   },
   'nvim-lualine/lualine.nvim',
   'neovim/nvim-lspconfig',
-  'mfussenegger/nvim-dap',
   {
     'mrcjkb/haskell-tools.nvim',
     version = '^3',
     ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
+    dependencies = {'mfussenegger/nvim-dap',},
   },
   {
     'gfanto/fzf-lsp.nvim',
